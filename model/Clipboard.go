@@ -30,14 +30,14 @@ func AddLogs(c Clipboard) {
 		logs = append(logs, ClipboardLog{
 			Id:   0,
 			Msg:  c.Content,
-			Date: time.Now().String(),
+			Date: time.Now().Format("2006-01-02 15:04:05"),
 		})
 	} else {
 		logs = logs[:gobalConfig.HistoryNum-1]
 		logs = append(logs, ClipboardLog{
 			Id:   0,
 			Msg:  c.Content,
-			Date: time.Now().String(),
+			Date: time.Now().Format("2006-01-02 15:04:05"),
 		})
 	}
 }
